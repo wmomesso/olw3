@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Enums\PaymentMethod;
+use App\Enums\PaymentStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,15 +19,7 @@ class PaymentFactory extends Factory
     public function definition(): array
     {
         return [
-            'external_id' => fake()->uuid(),
-            'order_id',
-            'method',
-            'status',
-            'installments',
-            'approved_at',
-            'qr_code_64',
-            'qr_code',
-            'ticket_url',
+
         ];
     }
 }

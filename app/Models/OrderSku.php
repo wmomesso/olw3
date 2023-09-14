@@ -3,12 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class OrderSku extends Pivot
-{
+class OrderSku extends Pivot {
+
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
@@ -17,7 +18,7 @@ class OrderSku extends Pivot
         'product',
         'quantity',
         'unitary_price',
-        ];
+    ];
 
     protected $casts = [
         'product' => 'json'

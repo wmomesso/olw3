@@ -16,6 +16,6 @@ class BrandSeeder extends Seeder
         Brand::factory()
             ->create([
                 'name' => 'Beer and Code'
-                ]);
+            ]);
     }
 }

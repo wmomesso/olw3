@@ -10,8 +10,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Order extends Model
-{
+class Order extends Model {
+
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
@@ -22,7 +22,7 @@ class Order extends Model
     ];
 
     protected $casts = [
-      'status' => OrderStatusEnum::class,
+        'status' => OrderStatusEnum::class
     ];
 
     public function user(): BelongsTo
@@ -42,7 +42,7 @@ class Order extends Model
         return $this->hasMany(Payment::class);
     }
 
-    public function shippings():  HasMany
+    public function shippings(): HasMany
     {
         return $this->hasMany(Shipping::class);
     }

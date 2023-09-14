@@ -17,9 +17,8 @@ class SkuFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name,
-            'price' => $this->faker->numberBetween(1, 1000),
-            'description' => $this->faker->text,
+            'name' => $this->faker->word(),
+            'price' => $this->faker->randomFloat(2, 500, 1000),
         ];
     }
 }

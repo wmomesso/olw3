@@ -17,8 +17,8 @@ class FeatureFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->randomElement(['CPU', 'RAM', 'GPU', 'Storage', 'Other']),
-            'unit' => fake()->word(),
+            'name' => $this->faker->randomElement(['Cor', 'Tamanho']),
+            'unit' => $this->faker->word(),
         ];
     }
 }

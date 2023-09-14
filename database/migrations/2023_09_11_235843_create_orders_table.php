@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('skus', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained();
-            $table->string('name');
-            $table->decimal('price', 8, 2);
-            $table->text('description')->nullable();
+            $table->foreignId('user_id')->nullable()->constrained();
+            $table->string('session_id')->nullable();
+            $table->decimal('total', 10, 2)->nullable();
+            $table->integer('status'); //ENUM
             $table->timestamps();
             $table->softDeletes();
         });
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('skus');
+        Schema::dropIfExists('orders');
     }
 };

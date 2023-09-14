@@ -3,8 +3,8 @@
 namespace Database\Factories;
 
 use App\Enums\OrderStatusEnum;
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Order>
@@ -19,10 +19,10 @@ class OrderFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::inRandomOrder()->first()->id,
-            'session_id' => fake()->uuid(),
-            'total' => fake()->randomFloat(2, 0, 100),
-            'status' => fake()->randomElement([OrderStatusEnum::CART, OrderStatusEnum::PENDING, OrderStatusEnum::PAID, OrderStatusEnum::CANCELED, OrderStatusEnum::REJECTED]),
+            'session_id' => Str::uuid(),
+            'total' => $this->faker->randomFloat(2, 0, 9000),
+            'status' => $this->faker->randomElement([OrderStatusEnum::CART,OrderStatusEnum::PAID,OrderStatusEnum::PENDING,
+                OrderStatusEnum::CANCELED])
         ];
     }
 }

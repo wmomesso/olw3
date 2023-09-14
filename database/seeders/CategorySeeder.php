@@ -15,7 +15,7 @@ class CategorySeeder extends Seeder
     {
         Category::factory()
             ->create([
-                'name' => 'Camiseta'
+                'name' => 'Camisetas'
             ]);
     }
 }

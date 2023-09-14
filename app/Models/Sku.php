@@ -16,7 +16,6 @@ class Sku extends Model
         'product_id',
         'name',
         'price',
-        'description',
     ];
 
     public function skus(): BelongsToMany
@@ -24,7 +23,7 @@ class Sku extends Model
         return $this->belongsToMany(Order::class)->using(OrderSku::class);
     }
 
-    public function product():BelongsTo
+    public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
     }

@@ -1,42 +1,36 @@
-<x-app-layout>
-    <div class="bg-tertiary-900">
-        <div class="fixed left-0 top-0 hidden lg:block h-full w-1/2 bg-tertiary-900" aria-hidden="true"></div>
-        <div class="fixed right-0 top-0 hidden lg:block h-full w-1/2 bg-tertiary-800" aria-hidden="true"></div>
+#dados app
+Public Key
+TEST-a724998f-ddbd-409e-b1d1-448b19c44480
 
-        <div class="relative mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2 gap-x-16 lg:px-16 lg:pt-16">
-            <section aria-labelledby="summary-heading"
-                     class="bg-tertiary-800 py-12 md:px-10 lg:col-start-2 lg:row-start-1 lg:mx-auto lg:w-full lg:max-w-lg lg:bg-transparent lg:px-0 lg:pb-24 lg:pt-0">
+Access Token
+TEST-3250180101730382-060910-e93eba0a40c89f98f99d7feebca682b7-74854206
 
-                <div class="mx-auto max-w-2xl px-4 lg:max-w-none lg:px-0">
-                    <dl>
-                        <dt class="text-lg font-medium text-primary-200">Resumo</dt>
-                    </dl>
+#usuario teste seller
+{
+    "id": 1479225861,
+    "email": "test_user_1488804918@testuser.com",
+    "nickname": "TESTUSER1488804918",
+    "site_status": "active",
+    "password": "vPxsrmufCJ"
+}
 
-                    <x-checkout.product-list>
-                        <x-checkout.product-item
-                            name="Product 1"
-                            price="10"
-                            :features="[
-                            'Feature 1',
-                            'Feature 2'
-                            ]"
-                            image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        />
-                    </x-checkout.product-list>
+Public Key
+TEST-13b82bc8-20c5-4eeb-b03a-2429f5a34fed
+Access Token
+TEST-2695916187535082-091408-3c5daf7416af4ec02961ea745ff4925f-1479225861
 
-                    <dl class="space-y-6 border-t border-white border-opacity-10 pt-6 text-sm font-medium">
-                        <x-checkout.summary-item title="Subtotal" value="R$ 10"/>
-                        <x-checkout.summary-item title="Frete" value="R$ 5.75"/>
-                        <x-checkout.summary-item title="Total" value="R$ 15.75" :is-last="true"/>
-                    </dl>
+#usuario teste comprador
+{
+    "id": 1479224839,
+    "email": "test_user_1954874227@testuser.com",
+    "nickname": "TESTUSER1954874227",
+    "site_status": "active",
+    "password": "T2fzt30Vgb"
+}
 
-                </div>
-            </section>
 
-            <section aria-labelledby="payment-and-shipping-heading"
-                     class="py-16 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:w-full lg:max-w-lg lg:pb-24 lg:pt-0">
 
-                <form action="">
+<form action="">
                     <div class="mx-auto max-w-2xl px-4 lg:max-w-none lg:px-0">
                         <div>
                             <x-section-title title="Informação de contato"/>
@@ -93,8 +87,3 @@
                         </div>
                     </div>
                 </form>
-            </section>
-
-        </div>
-    </div>
-</x-app-layout>
